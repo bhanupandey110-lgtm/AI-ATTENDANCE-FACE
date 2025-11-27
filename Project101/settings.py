@@ -145,7 +145,7 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'youremail@gmail.com'
 EMAIL_HOST_PASSWORD = 'your gmail app password'
 # Render Deployment Settings
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['.onrender.com']
 
