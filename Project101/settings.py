@@ -106,7 +106,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'Asia/kolkata' # add kolkata for india timezone
+TIME_ZONE = 'Asia/Kolkata' # add kolkata for india timezone
 
 USE_I18N = True
 
