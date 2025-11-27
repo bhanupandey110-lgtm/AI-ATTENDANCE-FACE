@@ -1,0 +1,28 @@
+import seaborn as sns
+import matplotlib.pyplot as plt
+import pandas as pd
+df = sns.load_dataset("mpg").dropna()
+
+sns.lmplot(
+    data=df,
+    x="displacement",
+    y="mpg",
+    hue="origin",
+    lowess=True,     
+    height=5,
+    aspect=1.3
+)
+
+plt.xlabel("Engine Displacement")
+plt.ylabel("Fuel Efficiency (MPG)")
+plt.title("Displacement vs MPG with LOWESS Trend by Vehicle Origin")
+plt.legend(title="Origin")
+plt.show()
+
+interpretation = """
+Vehicles with higher engine displacement and horsepower consistently show lower fuel efficiency (mpg),
+indicating that larger and more powerful engines consume more fuel. Japanese and European cars generally
+maintain better mpg at comparable displacement or horsepower levels than U.S. cars. U.S. vehicles display
+the steepest decline in mpg as engine size increases, showing less efficient engine designs overall.
+"""
+print(interpretation)
